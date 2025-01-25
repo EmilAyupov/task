@@ -130,7 +130,7 @@ class DataBaseService implements DataBaseServiceInterface
      * @param array $row
      * @return void
      */
-    public function addRowById(string $table, array $row): void
+    public function addRow(string $table, array $row): void
     {
         unset($row['id']);
 
@@ -144,7 +144,7 @@ class DataBaseService implements DataBaseServiceInterface
      * @param array $row
      * @return void
      */
-    public function updateRowById(string $table, array $row): void
+    public function updateRow(string $table, array $row): void
     {
         $strValues = '';
         foreach ($row as $column => $value) {

@@ -20,7 +20,7 @@ interface DataBaseServiceInterface
 
     public function getRowById(string $table, int $id): ?array;
 
-    public function addRowById(string $table, array $row): void;
+    public function addRow(string $table, array $row): void;
 
-    public function updateRowById(string $table, array $row): void;
+    public function updateRow(string $table, array $row): void;
 }

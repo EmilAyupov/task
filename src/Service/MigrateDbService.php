@@ -43,9 +43,9 @@ class MigrateDbService
                 $sourceRows = $this->sourceDb->getRowFromTable($table);
                 foreach ($sourceRows as $row) {
                     if ($this->targetDb->getRowById($table, $row['id'])) {
-                        $this->targetDb->updateRowById($table, $row);
+                        $this->targetDb->updateRow($table, $row);
                     } else {
-                        $this->targetDb->addRowById($table, $row);
+                        $this->targetDb->addRow($table, $row);
                     }
                 }
             }
